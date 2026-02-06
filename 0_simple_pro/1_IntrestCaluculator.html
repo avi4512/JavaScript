@@ -1,0 +1,62 @@
+<!--Simple Intrest Caluclator using [dilouge boxe's]-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Intrest Caluclator</title>
+
+    <style>
+
+        #d1{
+            width: 30%;
+            height: 60%;
+            margin: auto;
+            background-color: aquamarine;
+            border-radius: 10px;
+            box-shadow:3px 4px blueviolet ;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        button:hover{
+            background-color: rgb(19, 240, 22);
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Simple Intrest Caluclator</h2>
+    <div id="d1">
+
+        <label for="t1">Enter Amount</label><br>
+        <input type="text" id="t1" ><span>&#8377;</span><br>
+        <label for="t2">Enter Time</label><br>
+        <input type="text" id="t2" ><span>Y</span><br>
+        <label for="t3">Rate of Intrest</label><br>
+        <input type="text" id="t3" ><span>%</span><br>
+
+        <!--
+        <label for="t4">Total</label><br>
+        <input type="text" id="t4" readonly><output id="res"></output><br>
+        -->
+
+        <button onclick="SPI()">Calculate</button>
+    </div>
+
+    <script>
+
+        function SPI(){
+        let Amount = t1.value;
+        let Time = t2.value;
+        let RateOfIntrest = t3.value;
+        let result = (Amount * Time * RateOfIntrest) / 100;
+        alert(result)
+        }
+    </script>
+
+    
+    
+</body>
+</html>

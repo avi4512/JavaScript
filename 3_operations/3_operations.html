@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All JavaScript Operations</title>
+</head>
+<body>
+
+<h2>All JavaScript Operations Demo</h2>
+<hr>
+
+<script>
+/* Variables */
+let a = 10;
+let b = 3;
+let c = "10";
+let flag = true;
+
+/* Arithmetic Operations */
+document.write("<b>Arithmetic Operations</b><br>");
+document.write("a + b = " + (a + b) + "<br>");
+document.write("a - b = " + (a - b) + "<br>");
+document.write("a * b = " + (a * b) + "<br>");
+document.write("a / b = " + (a / b) + "<br>");
+document.write("a % b = " + (a % b) + "<br><br>");
+
+/* Assignment Operations */
+document.write("<b>Assignment Operations</b><br>");
+let x = 5;
+x += 2;
+document.write("x += 2 → " + x + "<br>");
+x -= 1;
+document.write("x -= 1 → " + x + "<br><br>");
+
+/* Relational Operations */
+document.write("<b>Relational Operations</b><br>");
+document.write("a > b : " + (a > b) + "<br>");
+document.write("a < b : " + (a < b) + "<br>");
+document.write("a >= 10 : " + (a >= 10) + "<br>");
+document.write("a == c : " + (a == c) + "<br>"); //only value
+document.write("a === c : " + (a === c) + "<br>"); // value and data type
+document.write("a != b : " + (a != b) + "<br><br>");
+
+/* Logical Operations */
+document.write("<b>Logical Operations</b><br>");
+document.write("AND (&&) : " + (a > 5 && b < 5) + "<br>");
+document.write("OR (||) : " + (a < 5 || b < 5) + "<br>");
+document.write("NOT (!) : " + (!flag) + "<br><br>");
+
+/* Increment & Decrement */
+document.write("<b>Increment & Decrement</b><br>");
+let num = 10;
+num++;
+document.write("After Increment : " + num + "<br>");
+num--;
+document.write("After Decrement : " + num + "<br><br>");
+
+/* Concatination Operation */
+document.write("<b>String Operation</b><br>");
+let firstName = "Avinash";
+let lastName = "Reddy";
+document.write("Full Name : " + firstName + " " + lastName + "<br><br>");
+
+/* Ternary Operation */
+document.write("<b>Ternary Operation</b><br>");
+
+document.write(10%2==0 ? "Even" : "Odd")
+
+/* Typeof Operation */
+document.write("<b>Typeof Operation</b><br>");
+document.write("Type of a : " + typeof a + "<br>");
+document.write("Type of firstName : " + typeof firstName + "<br>");
+
+</script>
+
+</body>
+</html>
