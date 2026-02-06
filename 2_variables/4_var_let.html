@@ -1,0 +1,29 @@
+<!--difference b/w var & let-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on diff b/w var and let</ins></h1>
+
+    <h3><ins>var</ins></h3>
+    <script>
+        var z = 10
+        var z = "Avi"; //re-defing allowed
+        document.write(z,"<br>")
+    </script>
+
+    <h3><ins>let</ins></h3>
+    <script>
+        let z = 10 //re-defing not allowed
+        let z = "Avi";  //Identifier 'z' has already been declared
+        document.write(z,"<br>")
+    </script>
+    
+</body>
+</html>
