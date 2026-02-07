@@ -1,0 +1,36 @@
+<!--Creating Array with the New Array()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h3>Declaring array with new Array()</h3>
+    <script>
+        let arr = new Array();
+        arr[0] = 11;
+        arr[1] = 22;
+        arr[2] = 33;
+        arr[3] = 44;
+
+        document.write("Elements:"+arr,"<br>");
+        document.write("Length:",arr.length);
+
+        document.write("<h3>Intilizing array with new Array()</h3>")
+
+        let a = new Array(10,20,30,40,50)
+        document.write("Elements:"+a,"<br>");
+        document.write("Length:",a.length,"<br>");
+
+        for(i=0; i<a.length ;i++){
+
+            document.write("Element: ",a[i],"<br>");
+        }
+    </script>
+    
+</body>
+</html>
