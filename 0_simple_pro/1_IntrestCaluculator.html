@@ -37,10 +37,10 @@
         <label for="t3">Rate of Intrest</label><br>
         <input type="text" id="t3" ><span>%</span><br>
 
-        <!--
-        <label for="t4">Total</label><br>
-        <input type="text" id="t4" readonly><output id="res"></output><br>
-        -->
+        
+        <label for="t4">Total</label><br><br>
+        <output id="res" style="background-color: coral;"></output><br><br>
+        
 
         <button onclick="SPI()">Calculate</button>
     </div>
@@ -52,7 +52,10 @@
         let Time = t2.value;
         let RateOfIntrest = t3.value;
         let result = (Amount * Time * RateOfIntrest) / 100;
-        alert(result)
+
+        res.value = "Result = " + result
+
+        alert("Result = "+result)
         }
     </script>
 
