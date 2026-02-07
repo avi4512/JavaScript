@@ -1,0 +1,49 @@
+<!--Adding elements to the array with buttons-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding elements</title>
+</head>
+<body>
+
+    <label for="t1">Add Elements</label>
+    <input type="text" id="t1">&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="addElement()">Add Element</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="display()">Display Elements</button><br>
+
+    <output id="elements"></output><br>
+
+    <output id="total"></output>
+
+    <script>
+
+        let arr = []
+
+        let sum = 0
+        function addElement(){
+            
+            let val = document.getElementById("t1").value
+
+            if( val != ""){
+                let num = Number(val)
+                arr.push(num)
+                sum = sum + num;
+                document.getElementById("t1").value = "";
+            }
+        }
+
+        function display(){
+            elements.value = "Array Elements: "+arr.join(", ")
+           
+            total.value = "Total = "+sum
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>
