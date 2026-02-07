@@ -1,0 +1,127 @@
+<!--Result's-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result's</title>
+
+    <style>
+        table{
+            background-color: beige;
+            width: 350px;
+            height: 350px;
+            border-radius: 10px 15px;
+              
+
+            border: 2px solid rgb(56, 243, 171);
+            box-shadow: 4px 5px orangered;
+        }
+        caption{
+            font-size: 30px;
+            color: rgb(240, 60, 15);
+        }
+
+        #results_button:hover{
+            background: linear-gradient(to left, red, rgb(10, 233, 73));
+            cursor: pointer;
+           
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 style="text-align: center;color:brown"><ins>Student Mark's Result</ins></h1>
+    <table align="center">
+
+        
+        <tr>
+            <td><label for="id">ID</label></td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" id="name"></td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2">Marks</td>
+        </tr>
+        <tr>
+            <td><label for="js">JavaScript</label></td>
+            <td><input type="text" id="js"></td>
+        </tr>
+        <tr>
+            <td><label for="css">CSS</label></td>
+            <td><input type="text" id="css"></td>
+        </tr>
+        <tr>
+            <td><label for="html">HTML</label></td>
+            <td><input type="text" id="html"></td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2"><button id="results_button" onclick="resultFun()">Get Results</button></td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2"><output id="total"></output></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><output id="avg"></output></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><output id="grade"></output></td>
+        </tr>
+    </table>
+
+    <script>
+        function resultFun(){
+
+            let jsMarks,cssMarks,htmlMarks,totalMarks,average;
+
+            jsMarks = Number(js.value);
+            cssMarks = Number(css.value);
+            htmlMarks = Number(html.value);
+
+            //total
+            totalMarks = jsMarks + cssMarks + htmlMarks
+            total.value = "Total = "+totalMarks+" /300";
+
+            //avg
+            average = totalMarks/3;
+            avg.value = "Average ="+average;
+
+            //grade
+
+            if(jsMarks >= 40 && cssMarks >= 40 && htmlMarks >= 40){
+
+                if(average >= 90){
+                    grade.value = "Grade = "+"A+"
+                }
+                else if(average >= 80){
+                    grade.value = "Grade = "+"A"
+                }
+                else if(average >= 70){
+                    grade.value = "Grade = "+"B"
+                }
+                else if(average >= 60){
+                    grade.value = "Grade = "+"C"
+                }
+                else if(average >= 50){
+                    grade.value = "Grade = "+"D"
+                }
+                else{
+                    grade.value = "Grade = "+"Fail"
+                }
+            }
+            else{
+                grade.value = "Grade = "+"Fail"
+            }
+
+        }
+    </script>
+</body>
+</html>
