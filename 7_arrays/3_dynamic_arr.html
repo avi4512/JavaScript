@@ -17,8 +17,33 @@
             let element = parseInt(prompt("Enter the element"));
             arr[i] = element
         }
-        document.write("Array elements: " + arr.join(", "));
+        document.write("Array elements: " + arr.join(", "),"<br>");
+
+        document.write("<h2>Fiding largest and smallest elements</h2>")
+
+        let lar = arr[0];
+        let sma = arr[0];
+        for(i=0;i<arr.length;i++){
+
+            if(arr[i] > lar){
+                lar = arr[i]
+            }
+
+        }
+
+        for(i=0;i<arr.length;i++){
+
+            if(arr[i] < sma){
+                sma = arr[i]
+            }
+
+        }
+
+        document.write("Largest: ",lar,"<br>")
+        document.write("Samllest: ",sma,"<br>")
     </script>
+
+    
     
 </body>
 </html>
