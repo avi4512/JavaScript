@@ -1,0 +1,95 @@
+<!--Calculator-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculator</title>
+
+    <style>
+        #d1{
+            width: 30%;
+            height: 300px;
+            margin: auto;
+            background-color: aquamarine;
+            border-radius: 10px;
+            box-shadow:3px 4px blueviolet ;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        #d1 button{
+            border: 0;
+            height: 35px;
+            width: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px; 
+            border-radius: 3px;
+            border: 2px solid #444;
+
+            padding: 0;              /* IMPORTANT */
+            cursor: pointer;
+        }
+
+        #d1 button:hover{
+            background-color: rgb(98, 99, 96);
+        }
+
+        #num1,
+        #num2,
+        #result {
+            text-align: center;   /* horizontal center */
+            height: 20px;
+
+            border: 2px solid #444;      /* your own border */
+            border-radius: 10px;         /* your own radius */
+
+            text-align: center;
+            font-size: 18px;
+
+            outline: none;               /* remove focus glow */
+            
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1 align="center" style="background-color: bisque;"><ins>Calculator</ins></h1>
+
+    <div id="d1">
+        <form action="">
+        <input type="text" name="num1" id="num1" placeholder="Enter the Number 1"><br><br>
+        <input type="text" name="num2" id="num2" placeholder="Enter the Number 2"><br><br>
+        
+
+        <button type="button" onclick="result.value = Number(num1.value) + Number(num2.value)">+</button>
+        <button type="button" onclick="result.value = Number(num1.value) - Number(num2.value)">-</button>
+        <button type="button" onclick="result.value = Number(num1.value) * Number(num2.value)">*</button>
+        <button type="button" onclick="result.value = Number(num1.value) / Number(num2.value)">/</button>
+        <button type="button" onclick="result.value = Number(num1.value) % Number(num2.value)">%</button>
+        <button type="button" onclick="result.value = Number(num1.value) ** Number(num2.value)">^</button><br>
+
+
+        <h4><ins>Result</ins></h4>
+        <input type="text" id="result"><br><br>
+        <input type="reset">
+    </form>
+        
+    </div>
+    
+</body>
+
+ <!--
+        <button onclick="alert(num1.value * num2.value)">mul</button> // alert box
+         OR
+        <button onclick="document.write(num1.value * num2.value)">mul</button> // print
+        OR
+        <output id="res"></output>
+        <button onclick="res.value = num1.value * num2.value">*</button> //output tag
+        -->
+</html>
