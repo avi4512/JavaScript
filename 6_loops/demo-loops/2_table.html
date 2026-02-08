@@ -1,15 +1,36 @@
-<!---->
+<!--Creating the table usnig the loops-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Demo loop</title>
 </head>
 <body>
 
-    <h1 align="center"><ins>Demo on </ins></h1>
+    <h1 align="center"><ins>Table</ins></h1>
+
+    <form action="">
+    <label for="table">Enter the Table Number: </label>
+    <input type="number" id="table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" id="num" value="Submit" onclick="cal()">
+    <br>
+    <output id="res" style="white-space: pre-line;"></output>
+</form>
+
+<script>
+    function cal(){
+
+        let table_num = document.getElementById("table").value
+        let result = ""
+        for(i=1;i<=10;i++){
+           result = result +  table_num+" x "+i+ " = "+table_num*i+"\n"
+           document.getElementById("res").value = result   
+        }
+    }
+</script>
+
     
 </body>
 </html>
