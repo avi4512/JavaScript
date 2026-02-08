@@ -1,0 +1,53 @@
+<!--demo on the while loop
+how loops works in the html and loops combo-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo loops</title>
+</head>
+<body>
+
+    <p>1.only JS and inside the JS using the html and iterating the loop</p>
+
+    <script>
+        for(i=0; i<=6; i++){
+            document.write("<h3>Hello World</h3>")
+        }
+    </script>
+
+    <p>Creating the drop down box for selecting the year(inside the JS writting the HTML)</p>
+    <form action="" target="_blank"></form>
+    <select name="years" id="years" style="width: 100px;">
+        <script>
+            document.write("<option value=none>--None--</option>")
+            for(let i=1990;i<=2026;i++){
+                document.write("<option value="+i+">"+i+"</option>")
+            }
+        </script>
+    </select>
+</form>
+
+    <p>3.Creating the table using the (inside the HTML we are writing the script) with loop</p>
+
+    <table border="">
+        
+            <tr>
+                <th>col1</th><th>col2</th>
+            </tr>
+      
+        <script>
+            for(i=1;i<11;i++){
+                document.write("<tr><td>"+i+"</td><td>"+i+"</td></tr>")
+            }
+        </script>
+    
+    
+    </table>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--push() pop()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Array Methods</ins></h1>
+
+    <h3>Demo on push()</h3>
+
+    <script>
+
+        // ---------------Push()-------------------
+        //push() add element to the array and.
+        //push() gives back (returns) the updated length of the array.
+        let fruits = new Array();
+        fruits.push("Mango");
+        fruits.push("Bananan");
+        fruits.push("Orange");
+
+        let newFruits = fruits.push("Guva")// sores the length to newFrutis variable
+
+        
+        document.write("Length of fruits: "+fruits.length+"<br>")
+        document.write("Value in newFruits is: "+newFruits+"<br>")
+        document.write("Fruits: "+fruits.join(", "))
+
+        //---------------------pop()-----------------------
+        //pop() → removes item
+        //pop() → returns removed value [if array is empty -> undefined]
+        
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>
