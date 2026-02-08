@@ -1,0 +1,49 @@
+<!--LIFO unshift() shift()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFO unshift() shift()</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Array Methods</ins></h1>
+
+    <h3>Demo on unshift()</h3>
+    <p><mark>unshift()</mark> add element to the first of the array and returns the element </p>
+    <script>
+
+        //-----------------------unshift()-------------------------------
+        //LIFO
+        // L --> R [unshift() shift()]
+        // ---------------Push()-------------------
+        //unshift() add element to the first to the Array.
+        //unshift() (return --> length of the array).
+        let colors = ["Red","Green","Blue","Yellow","Orange"];
+
+        document.write("Original Colors: "+colors.join(", ")+"<br>")
+        colors.unshift("SkyBlue")
+        document.write("Added skyblue to Colors: "+colors.join(", ")+"<br>")
+
+        let col = colors.unshift("Pink"); // col stores the length of the updated array
+        document.write("Original Colors: "+colors.join(", ")+"<br>")
+        document.write("Length of the array:"+col)
+
+        //---------------------pop()-----------------------
+        //pop() → removes first item
+        //pop() → returns removed value [if array is empty -> undefined]
+
+        document.write("<h3>Demo on shift()</h3>")
+
+        let first_ele = colors.shift()
+        document.write("Removing the first element:"+first_ele+"<br>")
+        document.write("After removing the first element: colors =  "+colors.join(", ")+"<br>")
+        document.write("Removing the first element:"+colors.shift()+"<br>")
+        document.write("After removing the first element: colors =  "+colors.join(", ")+"<br>")
+
+
+    </script>
+</body>
+</html>

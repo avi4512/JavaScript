@@ -1,0 +1,82 @@
+<!---->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Array methods</ins></h1>
+
+    <h3>1.inbuit-method of <mark>indexOf()</mark></h3>
+    <p>it returns the "index" of the particular element in the array <br>
+        2.if no element is found return -1</p>
+
+    <script>
+
+        //1.indexOf()
+        let arr1 = [10,3,5,8,2,9,10,1.2]
+        document.write("Index of the 8 is: "+arr1.indexOf(8),"<br>")
+        document.write("Index of the 100 is: "+arr1.indexOf(100),"<br>")
+
+        document.write("<h3>2.inbuit-method of <mark>lastIndexOf()</mark></h3>")
+        document.write("<p>it returns the last index of the particular element in the array <br> 2.if no element is found return -1</p>")
+
+
+        //2.lastIndexOf()
+        let arr2 = new Array(10,20,30,40,50,10,10,60)
+        document.write("last Index of the 10 is: "+arr2.lastIndexOf(10),"<br>")
+        document.write("last Index of the 100 is: "+arr2.lastIndexOf(11),"<br>")
+
+        //3.include
+        document.write("<h3>3..inbuit-method of <mark>includes()</mark></h3>")
+        document.write("<p>it returns the true if element presenet <br> 2.if no element is found return false</p>")
+
+        let arr3 = new Array(10,20,30,40,50,10,10,60)
+        document.write("40 presnet in the array ? = "+arr3.includes(40),"<br>")
+        document.write("3 presnet in the array ? = "+arr3.includes(3),"<br>")
+
+        //4.sort()
+        document.write("<h3>4.inbuit-method of <mark>sort()</mark></h3>")
+        document.write("<p>sort() elements in ASC order<br>")
+
+        let arr4 = [123,88,400,10,33,21,25,56,78]
+        document.write("Before sort() elements is: "+arr4,"<br>")
+        document.write("After sort() elements is: "+arr4.sort((a,b)=>a-b),"<br>")
+
+        //5.reverse()
+        document.write("<h3>5.inbuit-method of <mark>reverse()</mark></h3>")
+        document.write("<p>reverse() the elements in the array<br>")
+
+        let arr5 = [1,2,3,4,5,6,7]
+        document.write("Before reverse() elements is: "+arr5,"<br>")
+        document.write("After reverse() elements is: "+arr5.reverse(),"<br>")
+
+        //6.join()
+        document.write("<h3>6.inbuit-method of <mark>join()</mark></h3>")
+        document.write("<p>join() the elements in the array<br>")
+
+        let arr6 = [1,2,3,4,5,6,7]
+        document.write("Elements : "+arr6,"<br>")
+        document.write("Elements using the join(): "+arr6.join(" * "),"<br>")
+
+
+
+        
+    
+
+
+
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
