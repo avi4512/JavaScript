@@ -1,0 +1,38 @@
+<!--pass by value-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass by value</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on pass by value</ins></h1>
+
+    <script>
+            //pass by value
+             //we can pass any no.of arg [no errors] raised
+        function greetMsg(time,name)//[parameters]
+        {
+            document.write("Good "+ time +" "+ name)
+        }
+
+        function myFunc(){
+            let t,n;
+            t = "Morning";
+            n = "Avi";
+            //passing data as copies not original data
+            greetMsg(t,n)//[argument's]
+        }
+
+        myFunc();
+        document.write("<br>")
+        greetMsg("Afternoon");//passing 1 argument[not passed value filled with default value]
+        document.write("<br>")
+        greetMsg("Eveing","Avinash","Reddy");//passing 3 arguements[extra passed arg get skipped]
+    </script>
+    
+</body>
+</html>

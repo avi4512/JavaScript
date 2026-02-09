@@ -1,0 +1,30 @@
+<!--sum of natural numbers-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-sum of natural numbers</title>
+</head>
+
+    <script src="2_natural.js"></script> <!--linking JS file-->
+<body>
+
+    <h1 align="center"><ins>Demo on parameters</ins></h1>
+
+    <script>
+        //static value
+        //pass by value [primitive datatypes]
+        let n= 6;
+        sumNatural(n);
+        document.write("Original n: "+n+"<br>") //passing only the copy not original value
+
+        //dynamiv value
+        let n2 = parseInt(prompt("Enter the number: "))
+        sumNatural(n2);
+
+    </script>
+    
+</body>
+</html>
