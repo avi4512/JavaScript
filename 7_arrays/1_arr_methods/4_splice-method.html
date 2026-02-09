@@ -1,0 +1,64 @@
+<!--splice()
+array.splice(startIndex, deleteCount, item1, item2, ...)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice()</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on splice()</ins></h1>
+    <h3>1.deleting elements using the splice</h3>
+    <p>[splice(index, no.of ele to delete)]</p>
+    <script>
+        //array.splice(startIndex, deleteCount, item1, item2, ...)
+
+        //1.deleting elements
+       let arr = [10,20,30,40,50]
+       document.write("Before deleting: "+arr.join(", ")+"<br>")
+       let de_arr = arr.splice(2,2)//we can specify the no.of element's to delete
+       document.write("After deleting: "+arr.join(", ")+"<br>")
+       document.write("deleted elements: "+de_arr.join(", ")+"<br>")
+
+
+       //2.inserting elements
+       document.write("<h3>2.inserting elements using the splice</h3>")
+       document.write("<p>[splice(index, 0, ele to insert)]</p>")
+
+       let arr2 = ["Apple","Blue",12,'Z',12.3]
+       document.write("Before inserting the element: "+arr2.join(", ")+"<br>")
+       arr2.splice(0,0,1)// inserting 1 element
+       document.write("After inserting the element at index 0: "+arr2.join(", ")+"<br>")
+
+       arr2.splice(1,0,"one","two")
+       document.write("After inserting the elements at index 1 and 2 =  "+arr2.join(", ")+"<br>")
+
+       //3.updating the elements[deleting the elements and inserting the elements]
+       document.write("<h3>3.updating elements using the splice</h3>")
+       document.write("<p>[splice(index, no.of ele, ele to insert)]</p>")
+
+       let arr3 = ["red","bule","green","yellow","orange"]
+       document.write("Before updating the elements: "+arr3.join(", ")+"<br>")
+
+       let r_val = arr3.splice(0,1,"Zero") // updating 1 element
+       document.write(r_val+" change to -->"+" Zero<br>")
+       document.write("After updating the element at index 0: "+arr3.join(", ")+"<br>")
+
+       arr3.splice(2,2,10,"updated"); // updating 2 elements
+       document.write("After updating the elements: "+arr3.join(", ")+"<br>")
+
+
+
+
+       
+
+
+
+       
+    </script>
+</body>
+</html>
