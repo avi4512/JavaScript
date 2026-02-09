@@ -1,0 +1,48 @@
+<!--2D array-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on 2D array</ins></h1>
+    <h3>1.2D array with same no.of val's</h3>
+    <script>
+        let arr = [[10,20],[30,40],[50,60],[70,80]]
+
+        for(i=0;i<4;i++){
+            for(j=0;j<2;j++){
+                document.writeln(arr[i][j])
+            }
+            document.write("<br>")
+
+        }
+        document.write("-----------------------------------<br>")
+        document.write("<h3>2.2D array with different no.of val's</h3>")
+        let arr2 = [["one","two"],[3,4,30,40],["five","six","Seven"],[7.8,8.9]]
+
+        for(i=0;i<arr2.length;i++){
+            for(j=0;j<arr2[i].length;j++){
+                document.writeln(arr2[i][j])
+            }
+            document.write("<br>")
+        }
+
+        document.write("<h3>3.const with array's</h3>")
+        document.write("<p>const protects the reference, not the data inside the array.cant re-assging the array</p>")
+
+        const admins = ["Admin1", "Admin2", "Admin3"];
+        document.write("Before modifications"+admins+",br>");
+        admins[0] = "SuperAdmin"; // ✅ allowed
+        admins.push("Admin4");   // ✅ allowed
+        document.write("After modifications"+admins+",br>");
+
+
+    </script>
+    
+</body>
+</html>
