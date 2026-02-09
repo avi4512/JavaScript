@@ -1,0 +1,27 @@
+<!--for in-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on for in</ins></h1>
+    <p>it returns the [indexs] as values</p>
+
+    <script>
+
+        //for in
+        //Used mainly for objects, not recommended for arrays unless needed.
+        let arr = [100,200,300,400,500,600,"hundred"]
+
+        for(indexs in arr){
+            document.write("Index: "+indexs+" value: "+arr[indexs]+"<br>")
+        }
+    </script>
+    
+</body>
+</html>

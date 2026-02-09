@@ -1,0 +1,37 @@
+<!--for of-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on for of</ins></h1>
+    <p>it returns the direct [vaules]</p>
+
+    <script>
+
+        //for of
+        //Directly gives values
+        //No index
+        //Best for arrays, strings
+        
+        let arr = [100,200,300,400,500,600,"hundred"]
+
+        for(val of arr){
+            document.write(" value: "+val+"<br>")
+        }
+
+        document.write("<h3>Using the condition</h3>")
+        let arr2 = [101,200,301,400,501,600,"hundred"]
+        for(val of arr2){
+            if(val % 2 != 0)
+            document.write(" value: "+val+"<br>")
+        }
+    </script>
+    
+</body>
+</html>
