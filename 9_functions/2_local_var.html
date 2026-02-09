@@ -1,0 +1,45 @@
+<!--local variable in functions-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local variable</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on local variable</ins></h1>
+
+    
+    <script>
+
+    //local variable sotres upto function or block execution completed
+    //let
+
+        function func1(){
+            let f1 = 'Avi'
+            document.write("This is function 1 <br>")
+            document.write("Value in function 1: ="+f1)
+
+            //document.write("Value in function 2: ="+f2)//accessing func2 var(error)
+            
+
+        }
+
+        function func2(){
+            let f2 = 7
+            document.write("This is function 2 <br>")
+            document.write("Value in function 2: ="+f2)
+
+            //document.write("Value in function 1: ="+f1)//accessing func2 var(error)
+            
+        }
+
+        func1();
+        document.write("<br>")
+        func2();
+    </script>
+    
+</body>
+</html>
