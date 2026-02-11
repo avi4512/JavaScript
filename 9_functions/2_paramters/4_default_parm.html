@@ -1,0 +1,33 @@
+<!--passing default values to the paramters-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>default values</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on default values to the paramters</ins></h1>
+
+    <script>
+        //giving the defalut values to the paramenter'
+        //if arg not given it takes from the default values
+        //if args given  it overrides the defaulf and takes the given args values
+        function add(n1=0,n2=0,n3=0){ //passing default values
+
+            return n1+n2+n3;
+        }
+
+        document.write("Passing no val: "+add()+"<br>")
+        document.write("Passing all 3 args: "+add(1,2,3)+"<br>")
+        document.write("Passing only 2 val: "+add(10,2)+"<br>")
+        document.write("Passing more than 3: "+add(1,2,3,4,5,6)+"<br>")
+
+
+
+    </script>
+    
+</body>
+</html>

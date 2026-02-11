@@ -1,0 +1,29 @@
+<!--Example on function expression-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function expression</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Example of function expression </ins></h1>
+
+    <script>
+
+        let age = parseInt(prompt("Enter your Age"));
+        if(age < 18){
+
+           let res = function(){alert("Sorry! you are not eligible for voting")} //store and calling
+        }
+        else
+        {
+            (function(){alert("Congrat's. you are Eligible for voting")})() //Immediate Function (IIFE)
+        }
+
+    </script>
+    
+</body>
+</html>

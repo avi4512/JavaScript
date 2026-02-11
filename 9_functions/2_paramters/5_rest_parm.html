@@ -1,0 +1,56 @@
+<!--Rest Parameters (3 dots ...)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Rest Parameters (3 dots ...)</ins></h1>
+
+    <script>
+        //The three dots (...) are called rest operator in functions.
+        //Used when you don’t know how many arguments will come.
+
+       /* function add(...vals){ 
+
+            let total = 0
+
+            for(v of vals){
+                total += v;
+            }
+            return total;
+        }
+
+        document.write("Passing no val: "+add()+"<br>")
+        document.write("Passing all 3 args: "+add(1,2,3)+"<br>")
+        document.write("Passing only 2 val: "+add(10,2)+"<br>")
+        document.write("Passing more than 3: "+add(1,2,3,4,5,6)+"<br>") */
+
+    </script>
+
+    <script>
+
+        function add(v1=0,v2=0,...vals){ 
+
+            let total = 0
+    
+            for(v of vals){
+                total += v;
+            }
+            
+            return total;
+        }
+    
+        document.write("Passing no val: "+add()+"<br>")
+        document.write("Passing all 3 args: "+add(1,2,3)+"<br>")
+        document.write("Passing only 2 val: "+add(10,2)+"<br>")
+        document.write("Passing more than 3: "+add(1,2,3,4,5,6)+"<br>")
+
+    </script>
+    
+</body>
+</html>

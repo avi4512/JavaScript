@@ -1,0 +1,29 @@
+<!--Function Expression-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expression</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Function Expression</ins></h1>
+
+    <script> 
+        //function expression
+       document.write(function(){return "Hello"}())
+
+
+       document.write("<br>")
+
+       //function call-back
+       //forEach() how many times it call's [the function expression also call's thoes many times]
+       const arr = [10,20,30,40];
+       arr.forEach(function(val){document.write(val+"<br>")})
+    </script>
+
+    
+</body>
+</html>
