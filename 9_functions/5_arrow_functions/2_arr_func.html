@@ -1,0 +1,31 @@
+<!--Arrow functions-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Arrow functions</ins></h1>
+
+    <input type="text" id="t1" placeholder="Enter the number1"><br><br>
+    <input type="text" id="t2" placeholder="Enter the number2"><br><br>
+    <label for="res">Result:</label>
+    <input type="text" name="res" id="res" readonly><br><br>
+
+    <button id="add">Add</button>
+    <script>
+
+        document.getElementById("add").addEventListener("click",
+                                                    () => {a = parseInt(t1.value)
+                                                           b = parseInt(t2.value)
+                                                        result = a + b
+                                                    res.value = result})
+        
+    </script>
+    
+</body>
+</html>
