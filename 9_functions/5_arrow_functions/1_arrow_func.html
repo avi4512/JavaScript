@@ -1,0 +1,97 @@
+<!--Arrow Functions-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Arrow Functions</ins></h1>
+
+    <h3>1).simple arrow function(no param with 1 statement)</h3>
+
+    <script>
+
+        //without return keyword(becz only having 1 statement so browswer take care of it )
+        // no param with 1 statement
+        // () => statement
+        let func1 =  () => "Hello World!"
+        document.write(func1) // directly gives source code
+        document.write("<br>")
+        document.write(func1()) // prints the return value
+        document.write("<br>")
+        document.write((() => "Hello World!")()+"<br>") //other way to print value using the warpping
+
+        let sum = () => 10+20;
+        document.write("sum = "+sum()+"<br>")
+        document.write("<h3>2).no params with no.of statements</h3>")
+        // no param with no.of statement's
+        // () => {statement's}
+
+        let func2 = () => {document.write("Hello ")
+                           document.write("world!")}
+
+        func2();
+
+        document.write("<h3>3). 1 params with 1 statement</h3>")
+        // 1 param with 1 statement
+        // (parm1) => statement
+
+        let areaCricle = (r) => 3.14 *(r**2);
+        document.write("Area of circle = "+areaCricle(3)+"<br>")
+
+        document.write("<h3>4). 1 params with no.of statement's</h3>")
+        // 1 param with no.of statement's
+        // (parm1) => {statement's}
+
+        let voteEligible = (n) => {if(n>18)
+                                    document.write("Eligible for vote..")
+                                else
+                                document.write("sorry! Not Eligible for vote..")
+                            }
+        voteEligible(23);
+        document.write("<br>")
+        voteEligible(14);
+
+        document.write("<h3>5). 2 params with 1 statement</h3>")
+        // 2 param with 1 statement
+        // (parm1,parm2) => statement
+
+        let calculation = (n1,n2) => document.write(
+                                    "Addition = " + (n1+n2) + "<br>" +
+                                    "Subtraction = " + (n1-n2) + "<br>" +
+                                    "Multiplication = " + (n1*n2) + "<br>" +
+                                    "Division = " + (n1/n2) + "<br>"
+                                );
+                                    
+    
+        calculation(10,20);
+
+        document.write("<h3>6). no.of params with no.of statement</h3>")
+        // no.of param with no.of statement
+        // (parm1,parm2,parm3,....) => statement
+
+        let average = (a, b, c) => {
+            let sum = a + b + c;
+            let avg = sum / 3;
+            document.write("Sum = " + sum + "<br>");
+            document.write("Average = " + avg);
+        };
+        
+        average(10, 20, 30);
+
+        document.write("<h3>7) call-back using the arrow function</h3>")
+        let arr = [10,32,23,46,5,12,54]
+
+        arr.sort((a,b) => (b-a))
+        document.write("Sortinh in decending order: "+arr)
+        
+
+
+    </script>
+    
+</body>
+</html>
