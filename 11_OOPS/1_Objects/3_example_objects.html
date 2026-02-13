@@ -21,7 +21,9 @@
 
             deposit(depositAmount){
                 if(depositAmount > 0){
+                    document.write("Before Deposit: "+this.currentBalance+"<br>")
                     this.currentBalance += depositAmount
+        
                     document.write("After the deposit of Money: "+this.currentBalance)
                 }
                 else{
@@ -29,11 +31,13 @@
                 }
             },
             withDraw : function(withDrawAmount){
+                document.write("Before withdraw: "+this.currentBalance+"<br>")
                 if(withDrawAmount > this.currentBalance){
                     document.write("Sorry! for the withdraw. Insufficent Fund's");
                 }
                 else{
                     this.currentBalance -= withDrawAmount;
+                    
                     document.write("After the withdraw of Money: "+this.currentBalance)
                 }
             },
