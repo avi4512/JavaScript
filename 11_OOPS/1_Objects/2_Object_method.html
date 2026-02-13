@@ -34,7 +34,7 @@
                                 else{
                                     return "Sorry! for this time no bonus Avl!!!";
                                 }*/
-                                
+
                                 bonus(){
                                 if(this.salary >= 50000) { //(obj2.salary)Problem: If Object Name Changes
                                     return ".........Bonus ON......";
@@ -45,6 +45,21 @@
 
                             }}
        document.write(obj2.bonus())
+
+       document.write("<h3>Accessing Object Properties</h3>")
+       document.write("Name: "+obj1.name);
+
+       document.write("<h3>Adding New Property After Creation</h3>")
+       obj1.age = 23;
+       document.write("Added new property age: "+obj1.age);
+
+       document.write("<h3>Deleting Property</h3>")
+
+       delete obj1.age
+       document.write("After deleting the property age: "+obj1.age);
+       
+
+
 
     </script>
     
