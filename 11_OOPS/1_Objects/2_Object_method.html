@@ -1,0 +1,52 @@
+<!--Object Creation with method's-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Creation</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Object Creation</ins></h1>
+
+    <script>
+        /*✅ Properties → Variables inside object
+          ✅ Methods → Functions inside object*/
+
+        const obj1 = {"id":101,"name":"Avi","salary":80000,
+                        display(){
+                            document.write("id: "+obj1.id+"<br>");
+                            document.write("Name: "+obj1.name+"<br>");
+                            document.write("Salary :"+obj1.salary+"<br>");
+                        }}
+       // document.write(obj1)
+        
+
+       obj1.display();
+
+        const obj2 = {"id":102,"name":"Hanuma","salary":90000,
+                            /*bonus: function(){
+                                if(this.salary >= 50000) { //(obj2.salary)Problem: If Object Name Changes
+                                    return ".........Bonus ON......";
+                                }
+                                else{
+                                    return "Sorry! for this time no bonus Avl!!!";
+                                }*/
+                                
+                                bonus(){
+                                if(this.salary >= 50000) { //(obj2.salary)Problem: If Object Name Changes
+                                    return ".........Bonus ON......";
+                                }
+                                else{
+                                    return "Sorry! for this time no bonus Avl!!!";
+                                }
+
+                            }}
+       document.write(obj2.bonus())
+
+    </script>
+    
+</body>
+</html>
