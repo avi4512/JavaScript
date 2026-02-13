@@ -1,0 +1,40 @@
+<!--Constructor[dynamic value's]-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic constructor</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on dynamic constructor</ins></h1>
+
+    <script>
+
+        class Student{
+            constructor(id,name){
+                this.id = id,
+                this.name = name,
+                this.clg = "KLU";    
+            }
+        }
+
+        const s1 = new Student(101,"Avi");
+        document.write("s1 id: "+s1.id+"<br>")
+        document.write("s1 name: "+s1.name+"<br>")
+        document.write("s1 clg: "+s1.clg+"<br>")
+
+        document.write("<BR>")
+        const s2 = new Student(102,"Hanuma");
+        document.write("s2 id: "+s2.id+"<br>")
+        document.write("s2 name:  "+s2.name+"<br>")
+        document.write("s1 clg: "+s2.clg+"<br>")
+
+
+    
+    </script>
+    
+</body>
+</html>
