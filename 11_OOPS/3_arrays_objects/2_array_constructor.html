@@ -1,0 +1,46 @@
+<!--arrays with constructor-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays with constructor</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on arrays with constructor</ins></h1>
+
+    <script>
+
+        let p = {
+            id:101,
+            name:"Avi",
+            address:{dno:"1-2",
+                street:"Ramalayam Street",
+                    village:"Konanki"}}
+
+                console.log(p)
+        class Address{
+            constructor(dno,street,village){
+                this.dno = dno;
+                this.street = street,
+                this.village =village
+            }
+        }
+
+        class Person{
+            constructor(id,name,dno,street,village){
+                this.id = id;
+                this.name = name
+                this.address = new Address(dno,street,village)
+            }
+        }
+
+        let p1 = new Person(101,"Avi","1-2","RamalayStreet","Konanki")
+        console.log(p1)
+    </script>
+
+    
+</body>
+</html>

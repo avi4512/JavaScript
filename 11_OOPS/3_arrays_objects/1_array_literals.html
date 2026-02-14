@@ -1,0 +1,65 @@
+<!--Creating array with literals-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array with literals</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on array with literals</ins></h1>
+
+    <h3>Seller's Product's list</h3>
+    <script>
+
+        //Let’s create a seller products list:
+
+        let p1 = {id:101,name:"Rice", cost:45, stock : 30}
+        let p2 = {id:102,name:"Mirchi", cost:55, stock : 20}
+        let p3 = {id:103,name:"Wheat", cost:40, stock : 35}
+
+        const products = [p1,p2,p3]
+
+        // To get all products object's
+        console.log(products)
+
+        //1.Accesing the specific object
+        console.log(products[0])
+
+        //2.specific property
+        console.log(products[1].name)
+
+        //3.looping
+        for(p of products){
+            console.log("id: "+p.id,"Name: "+p.name,"cost: "+p.cost,"stock: "+p.stock)
+        }
+
+        //4.adding new product
+        let p4 = {id:104,"name":"green Dal","cost":79,"stock":65}
+        products.push(p4) //adding to the array
+        console.log("After adding the new Product")
+        console.log(products)
+
+        //5.updating the product
+        console.log("Updating the rice price 45 -> 85")
+        products[0].cost = 85
+        console.log(products[0])
+
+        //6.deleting the product[filter (in-built)]
+        console.log("deleting the product of wheat based on id")
+        const updateProducts = products.filter(function(product){return product.id !== 103})
+        console.log(updateProducts)
+        
+        //7.searching based on id[find (in-built)]
+        console.log("searching the product based on id")
+        let res = updateProducts.find( product => product.id == 101)
+        console.log(res)
+
+
+
+    </script>
+    
+</body>
+</html>
