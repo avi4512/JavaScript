@@ -13,32 +13,25 @@
 
     <script>
 
-        let p = {
-            id:101,
-            name:"Avi",
-            address:{dno:"1-2",
-                street:"Ramalayam Street",
-                    village:"Konanki"}}
-
-                console.log(p)
-        class Address{
-            constructor(dno,street,village){
-                this.dno = dno;
-                this.street = street,
-                this.village =village
-            }
-        }
-
-        class Person{
-            constructor(id,name,dno,street,village){
+        class Product{
+            constructor(id,name,price,quantity){
                 this.id = id;
-                this.name = name
-                this.address = new Address(dno,street,village)
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
             }
         }
 
-        let p1 = new Person(101,"Avi","1-2","RamalayStreet","Konanki")
-        console.log(p1)
+        let p1 = new Product(101,"Rice",78,43);
+        let p2 = new Product(102,"Wheat",67,34);
+        let p3 = new Product(103,"Mirchi",97,63);
+        let p4 = new Product(104,"Dal",54,56);
+
+        const products = [p1,p2,p3,p4];
+
+        products.forEach( p => console.log(p.name))
+        
+       
     </script>
 
     

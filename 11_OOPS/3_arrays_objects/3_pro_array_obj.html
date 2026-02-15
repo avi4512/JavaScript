@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button:hover{
+
+            cursor: pointer;
+        }
+        table{
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <h2>🛒 Grocery Cart</h2>
+
+    <input type="text" id="pn" placeholder="product name" autofocus style="text-transform: uppercase;">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" id="pri" placeholder="Price">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" id="qun" placeholder="Qunatity"><br><br>
+    <button onclick="addToCart()">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="generateBill()">Generate Bill</button><br><br>
+
+    <table border="">
+        <tr>
+            <thead>
+                <th>S.NO</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Qunatity</th>
+                <th>Total</th>
+            </thead>
+        </tr>
+    </table>
+
+    <script>
+
+        const cartItems = [];
+
+
+        class Product{
+            constructor(name,price,quantity){
+                
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity
+
+                this.getTotal = function(){
+                    return this.price * this.quantity;
+                }
+            }
+        }
+
+        function addToCart(){
+
+            let name = document.getElementById("pn").value;
+            let price = parseFloat(document.getElementById("pri").value);
+            let quantity = parseFloat(document.getElementById("qun").value);
+
+            if(name == "" || isNaN(price) || isNaN(quantity) )
+            {
+                alert("Enter the valid Data!")
+                return;
+            }
+
+            const item = new Product(name,price,quantity)
+            cartItems.push(item);
+
+           
+
+            document.getElementById("pn").value = "";
+            document.getElementById("pri").value = "";
+            document.getElementById("qun").value = "";
+
+        }
+
+        function generateBill(){
+            let totalBill = 0;
+            let sno = 1;
+
+            for(item of cartItems){
+            sno++;
+            totalBill += item.price;
+            }
+            document.write("<h3>Total Bill : "+totalBill+"</h3>")
+        }
+    </script>
+
+    
+</body>
+</html>

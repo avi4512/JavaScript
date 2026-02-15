@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        input {
+            margin: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        table {
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🛒 Grocery Cart</h2>
+
+<input type="text" id="name" placeholder="Product Name">
+<input type="number" id="price" placeholder="Price">
+<input type="number" id="quantity" placeholder="Quantity">
+
+<button onclick="addToCart()">Add to Cart</button>
+<button onclick="generateBill()">Generate Bill</button>
+
+<h3>Cart Items:</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="cartTable"></tbody>
+</table>
+
+<h3 id="finalBill"></h3>
+
+<script>
+
+// Constructor Function
+function CartItem(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+
+    this.getTotal = function() {
+        return this.price * this.quantity;
+    }
+}
+
+// Array to store cart items
+const cart = [];
+
+function addToCart() {
+
+    const name = document.getElementById("name").value;
+    const price = parseFloat(document.getElementById("price").value);
+    const quantity = parseInt(document.getElementById("quantity").value);
+
+    if(name === "" || isNaN(price) || isNaN(quantity)) {
+        alert("Please enter valid data");
+        return;
+    }
+
+    const item = new CartItem(name, price, quantity);
+    cart.push(item);
+
+    displayCart();
+
+    // Clear inputs
+    document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("quantity").value = "";
+}
+
+function displayCart() {
+
+    const table = document.getElementById("cartTable");
+    table.innerHTML = "";
+
+    cart.forEach(item => {
+        const row = `
+            <tr>
+                <td>${item.name}</td>
+                <td>₹${item.price}</td>
+                <td>${item.quantity}</td>
+                <td>₹${item.getTotal()}</td>
+            </tr>
+        `;
+        table.innerHTML += row;
+    });
+}
+
+function generateBill() {
+
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.getTotal();
+    });
+
+    document.getElementById("finalBill").innerText =
+        "Total Bill Amount: ₹" + total;
+}
+
+</script>
+
+</body>
+</html>
