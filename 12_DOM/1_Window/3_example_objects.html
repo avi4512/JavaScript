@@ -1,0 +1,72 @@
+<!--example on objects[banking]-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on Banking</ins></h1>
+
+    <script>
+
+        const account = {
+            holderName:"Avi",
+            "accountNumber":"8790204512",
+            "bankName" :"Kotak",
+            "currentBalance":101,
+
+            deposit(depositAmount){
+                if(depositAmount > 0){
+                    document.write("Before Deposit: "+this.currentBalance+"<br>")
+                    this.currentBalance += depositAmount
+        
+                    document.write("After the deposit of Money: "+this.currentBalance)
+                }
+                else{
+                    document.write("Invalid Amount Please Check Once!");
+                }
+            },
+            withDraw : function(withDrawAmount){
+                document.write("Before withdraw: "+this.currentBalance+"<br>")
+                if(withDrawAmount > this.currentBalance){
+                    document.write("Sorry! for the withdraw. Insufficent Fund's");
+                }
+                else{
+                    this.currentBalance -= withDrawAmount;
+                    
+                    document.write("After the withdraw of Money: "+this.currentBalance)
+                }
+            },
+            checkBalance(){
+                document.write("Current Balance: "+ this.currentBalance);
+            },
+
+            accountInfo(){
+                document.write("Holder Name:"+this.holderName+"<br>")
+                document.write("AccountNumber:"+this.accountNumber+"<br>")
+                document.write("Bank Name:"+this.bankName+"<br>")
+                
+            }
+    }
+
+    document.write("<h3>1.Account Info</h3>");
+
+    account.accountInfo();
+    document.write("<br>");
+    document.write("<h3>2.Deposit Money</h3>");
+    account.deposit(101);
+    document.write("<h3>2.Withdraw Money</h3>");
+    account.withDraw(3);
+    document.write("<h3>2.check Balance</h3>");
+    account.checkBalance();
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!--window object methods-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window object methods</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on window object methods</ins></h1>
+
+    <output id="res" style="color: red;font-size:30px"></output>
+    <button onclick="openPage()">Open Google</button>
+
+    <button  onclick="printss()">Print</button>
+
+    <script>
+        /*
+        //1.alert
+        window.alert("1.alert()");
+
+        //2.confirm
+        window.confirm("2.Sure to delete ?")
+
+        //3.prompt
+        window.prompt("Enter the value")
+
+        //4.paserInt()
+        window.parseInt(1.23);
+
+        //5.paserFloat()
+        window.parseFloat(12);
+      
+
+        //6.setTimeOut() -.to perform task -. after somtine -> one time  executed
+        window.setTimeout(function(){window.location.href="https://www.facebook.com/"},3000)
+        window.setTimeout(function(){alert("6.setTimeOut()\n Session TIME OUT!")},5000)
+          
+
+        //7.setIntervel() .to perform task -. after somtine -> repetedly executed
+
+        function time(){
+        let d = new Date();
+        let out = (d.getHours()+" : "+d.getMinutes()+" : "+d.getSeconds()+" : "+d.getMilliseconds())
+        res.value = out;
+        }
+       window.setInterval("time()",1)
+
+       
+       //8.print
+       
+       function printss(){
+       window.print()
+       }
+       */
+
+       //9, open()
+       var myWin
+       function openPage() {
+        //window.open("https://www.google.com","Mywindow","width=400 , height=400, screenX =400, screenY = 200");
+
+        myWin = window.open("","","width=400 , height=400, screenX =400, screenY = 200")
+        myWin.document.write("<h2>My Own Window</h2>")
+        
+    }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

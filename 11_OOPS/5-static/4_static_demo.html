@@ -1,0 +1,51 @@
+<!--static-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on static</ins></h1>
+
+    <script>
+
+        class GroceryStore {
+
+            // Static property (common for all)
+            static storeName = "Village Fresh MArt";
+        
+            constructor(productName, price) {
+                this.productName = productName;
+                this.price = price;
+            }
+        
+            // Normal method
+            getProductDetails() {
+                console.log(`Product: ${this.productName}, Price: ₹${this.price}`);
+            }
+        
+            // Static method
+            static getStoreInfo() {
+                //console.log(`Welcome to ${GroceryStore.storeName}`);
+                console.log(`Welcome to ${this.storeName}`);
+                
+            }
+        }
+
+
+        let item1 = new GroceryStore("Rice", 50);
+        let item2 = new GroceryStore("Milk", 30);
+
+        GroceryStore.getStoreInfo(); //Accessing static method
+        item1.getProductDetails();
+        item2.getProductDetails();
+
+        
+    </script>
+    
+</body>
+</html>

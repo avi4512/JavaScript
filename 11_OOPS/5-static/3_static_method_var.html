@@ -1,0 +1,41 @@
+<!--static with method and variable-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object count</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on static method and var</ins></h1>
+
+    <script>
+
+        class Demo{
+
+            static count = 0;
+            constructor(){
+                console.log("Object is created")
+                Demo.count++;
+            }
+
+            static objCount(){
+                console.log("no.of Objects: "+Demo.count);
+            }
+
+        }
+
+        let d1 = new Demo();
+        let d2 = new Demo();
+        let d3 = new Demo();
+        let d4 = new Demo();
+        let d5 = new Demo();
+        Demo.objCount();
+
+
+    </script>
+    
+</body>
+</html>

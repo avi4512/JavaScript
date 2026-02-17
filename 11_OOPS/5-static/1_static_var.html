@@ -1,0 +1,30 @@
+<!--static with property-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on static property</ins></h1>
+
+    <script>
+
+        class Collage{
+            static clgName = "KLU";
+        }
+
+        //Accessing through class 
+        console.log(Collage.clgName);
+
+        //Accessing through obj
+        let c1 = new Collage();
+        console.log(c1.clgName); //we can't access the static properties throug the object's.
+
+    </script>
+    
+</body>
+</html>
