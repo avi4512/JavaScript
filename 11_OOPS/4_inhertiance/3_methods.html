@@ -1,0 +1,45 @@
+<!--inheritance without parameters-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance without parameters</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on inheritance without parameters</ins></h1>
+
+    <script>
+
+        class User{
+            constructor(name,email){
+                this.name = name;
+                this.email = email;   
+            }
+            login(){
+                console.log(this.name + " logged in");
+            }
+        }
+
+        class Seller extends User{
+
+            constructor(name, email, shopName) {
+                super(name, email); // calling parent constructor
+                this.shopName = shopName;
+            }
+        
+            uploadProduct() {
+                console.log(this.name + " uploaded a product from " + this.shopName);
+            }
+        }
+
+        s1 = new Seller("Avi","avi@gmail.com","Village MArt");
+        s1.login();
+        s1.uploadProduct();
+
+    </script>
+    
+</body>
+</html>

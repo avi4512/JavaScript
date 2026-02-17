@@ -1,0 +1,33 @@
+<!--adding new field after the object creation-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding new field</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on adding new field after the object creation</ins></h1>
+
+    <script>
+        class Demo{
+
+            constructor(id,name){
+              this.id = id;
+              this.name = name;
+              
+            }
+          }
+    
+          let d1 = new Demo(101,"Avi");
+          console.log(d1)
+          let d2 = new Demo(102,"Hanuma");
+          d2.branch = "CSE"
+          console.log(d2)
+        
+    </script>
+    
+</body>
+</html>

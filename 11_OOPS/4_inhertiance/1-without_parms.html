@@ -1,0 +1,36 @@
+<!--inheritance without parameters-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance without parameters</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on inheritance without parameters</ins></h1>
+
+    <script>
+
+        class Parent{
+            constructor(){
+                document.write("This is Parent class Constructor..<br>")
+            }
+        }
+
+        class Child extends Parent{
+
+            constructor(){
+                super(); //inherting parent class Constructor
+                document.write("This is Child class Constructor..<br>")
+            }
+        }
+
+        p1 = new Parent();
+        c1 = new Child();
+
+    </script>
+    
+</body>
+</html>

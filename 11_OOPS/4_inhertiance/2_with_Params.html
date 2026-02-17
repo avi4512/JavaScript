@@ -1,0 +1,36 @@
+<!--inheritance with parameters-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance with parameters</title>
+</head>
+<body>
+
+    <h1 align="center"><ins>Demo on inheritance with parameters</ins></h1>
+
+    <script>
+
+        class User{
+            constructor(name,email){
+                this.name = name;
+                this.email = email;
+            }
+        }
+
+        class Seller extends User{
+
+            constructor(name,email,shop){
+                super(name,email); //inherting parent class Constructor
+                console.log(name,email,shop)
+            }
+        }
+
+        s1 = new Seller("Avi","avi@gmail.com","Village MArt")
+
+    </script>
+    
+</body>
+</html>
